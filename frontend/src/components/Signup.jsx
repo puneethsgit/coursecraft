@@ -38,12 +38,16 @@ function Signup() {
         }
       });
   };
+
+  const handleBackToHome = () => {
+    navigate("/");
+  };
+
   return (
     <>
-      <div className="flex h-screen items-center justify-center  dark:bg-slate-900 dark:text-white ">
-        {" "}
+      <div className="flex h-screen items-center justify-center dark:bg-slate-900 dark:text-white">
         <div className="w-[600px]">
-          <div className="modal-box  dark:bg-slate-900 dark:text-white ">
+          <div className="modal-box dark:bg-slate-900 dark:text-white">
             <form method="dialog" onSubmit={handleSubmit(onSubmit)}>
               {/* if there is a button in form, it will close the modal */}
               <Link
@@ -89,36 +93,27 @@ function Signup() {
                 <span>Password</span>
                 <br />
                 <input
-                  type="passwprd"
+                  type="password" // Correct the typo from "passwprd" to "password"
                   placeholder="Enter Your password"
                   className="w-80 px-3 py-1 border rounded-md outline-none"
                   {...register("password", { required: true })}
                 />
                 <br />
-                {errors.email && (
+                {errors.password && ( // Corrected the errors object key
                   <span className="text-sm text-red-500">
-                    passwordy is required
+                    Password is required
                   </span>
                 )}
               </div>
-              {/* button */}
+              {/* buttons */}
               <div className="flex justify-around mt-4">
-                <button className="bg-pink-500 text-white rounded-md px-3 py-1 hover:bg-pink-700 duration-200">
+                <button
+                  type="submit"
+                  className="bg-pink-500 text-white rounded-md px-3 py-1 hover:bg-pink-700 duration-200"
+                >
                   Signup
                 </button>
-{/*                 <p className="text-m">
-                  Have account ?{" "}
-                  <button
-                    className="underline text-blue-500 cursor-pointer"
-                    onClick={() =>
-                      document.getElementById("my_modal_3").showModal()
-                    }
-                  >
-                    Login
-                  </button>{" "}
-                  <Login />
-                </p> */}
-                 <button
+                <button
                   type="button"
                   onClick={handleBackToHome}
                   className="bg-gray-500 text-white rounded-md px-3 py-1 hover:bg-gray-700 duration-200"
