@@ -39,6 +39,10 @@ main()
 
 //routes
 
+app.get('/', (req, res) => {
+  res.json({success: "Working"})
+})
+
 app.use("/course", courseRoute);
 app.use("/user", userRoute);
 
