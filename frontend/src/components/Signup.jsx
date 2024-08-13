@@ -106,7 +106,7 @@ function Signup() {
                 <button className="bg-pink-500 text-white rounded-md px-3 py-1 hover:bg-pink-700 duration-200">
                   Signup
                 </button>
-                <p className="text-m">
+{/*                 <p className="text-m">
                   Have account ?{" "}
                   <button
                     className="underline text-blue-500 cursor-pointer"
@@ -117,7 +117,7 @@ function Signup() {
                     Login
                   </button>{" "}
                   <Login />
-                </p>
+                </p> */}
               </div>
             </form>
           </div>
