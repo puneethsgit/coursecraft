@@ -118,6 +118,13 @@ function Signup() {
                   </button>{" "}
                   <Login />
                 </p> */}
+                 <button
+                  type="button"
+                  onClick={handleBackToHome}
+                  className="bg-gray-500 text-white rounded-md px-3 py-1 hover:bg-gray-700 duration-200"
+                >
+                  Back to Home
+                </button>
               </div>
             </form>
           </div>
